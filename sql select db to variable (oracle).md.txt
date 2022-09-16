@@ -1,0 +1,13 @@
+
+Dim rst As New ADODB.Recordset
+Dim sql_sID, var1 as String
+Dim cnn As ADODB.Connection
+Set cnn = New Connection
+cnnstr = "Provider=ORAOLEDB.ORACLE;Password=mt500919;Persist Security Info=True;User ID=MT500DB;Data Source=163.50.57.17/MTLT"
+cnn.Open cnnstr
+
+ 	sql_sID = "SELECT Column from Table WHERE Column='" & Values1 & "' Order by Column? DESC"
+    rst.Open sql_sID, cnn
+    var1 = rst.Fields(0)
+
+cnn.close
