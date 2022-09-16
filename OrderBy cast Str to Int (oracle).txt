@@ -1,0 +1,2 @@
+Order by   cast(Column as int ) ASC"
+Order by   cast(Column as int ) DESC"
