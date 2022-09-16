@@ -1,14 +1,9 @@
-Dim Item, Mins, Maxs As Integer
-Dim Line, Pro, Que, Spec, Pattern, IDs, Chk As String
-Dim sql_Update, sql_Ins, sql_Del As String
 
+Dim sql_Del As String
 Dim cnn As ADODB.Connection
 Set cnn = New Connection
 cnnstr = "Provider=ORAOLEDB.ORACLE;Password='';Persist Security Info=True;User ID='';Data Source=''"
 cnn.Open cnnstr
-
-
 	   sql_Del = "DELETE FROM TABLE WHERE Column = '" & ID & "'"
                 cnn.Execute sql_Del
-
 cnn.close
